@@ -1,0 +1,12 @@
+G:\CSYE\CSYE6202\projects\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+G:\CSYE\CSYE6202\projects\FinalProject\FinalProject\obj\Debug\FinalProject.DAL.csprojResolveAssemblyReference.cache
+G:\CSYE\CSYE6202\projects\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+G:\CSYE\CSYE6202\projects\FinalProject\FinalProject\bin\Debug\FinalProject.dll.config
+G:\CSYE\CSYE6202\projects\FinalProject\FinalProject\bin\Debug\FinalProject.dll
+G:\CSYE\CSYE6202\projects\FinalProject\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\bin\Debug\FinalProject.dll.config
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\bin\Debug\FinalProject.dll
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\obj\Debug\FinalProject.DAL.csprojResolveAssemblyReference.cache
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
