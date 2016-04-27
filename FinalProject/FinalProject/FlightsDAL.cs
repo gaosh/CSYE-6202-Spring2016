@@ -9,17 +9,43 @@ namespace FinalProject
 {
     public class FlightsDAL:InterfaceDAL
     {
+
         private SqlConnection connection = null;
         public void OpenConnection(string connenctonString)
         {
+           
             connection = new SqlConnection();
             connection.ConnectionString = connenctonString;
-            connection.Open();
+            try {
+                connection.Open();
+            }
+            catch(SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }catch(Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
+            }
         }
 
         public void CloseConnection()
         {
-            connection.Close();
+            try
+            {
+                connection.Close();
+            }
+            catch (SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
         public void InsertFlight(Flight flight)
         {
@@ -46,14 +72,24 @@ namespace FinalProject
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine("Sql related exception occurred. Exception details: {0}", e.Message);
+                    LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("A generic exception occurred. Exception details: {0}", e.Message);
+                    LogHelper.WriteLog(string.Format("A general exception occurred. Exception details: {0}", e.Message));
                 }
             }
 
+        }
+        public void UpdateCarPetName(string Flightnumber, Flight flight)
+        {
+            string sql = string.Format("Update Flights Set date = '{0}' Set arrival = '{1}' Set E_price = '{2}' Set Eplus_price= '{3}' Set B_price = '{4}' Set carrier = '{5}' Where Flight_Number = '{6}'",
+                flight.date,flight.arrival,flight.E_pirce,flight.Eplus_pirce,flight.B_pirce,flight.carrier, Flightnumber);
+
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.ExecuteNonQuery();
+            }
         }
         public List<Flight> GetAllFlights()
         {

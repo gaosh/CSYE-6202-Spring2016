@@ -10,3 +10,5 @@ C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\b
 C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\obj\Debug\FinalProject.DAL.csprojResolveAssemblyReference.cache
 C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\obj\Debug\FinalProject.dll
 C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\bin\Debug\log4net.dll
+C:\Users\gaosh_000\Source\Repos\CSYE-6202-Spring2016\FinalProject\FinalProject\bin\Debug\log4net.xml

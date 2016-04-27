@@ -14,12 +14,38 @@ namespace FinalProject
         {
             connection = new SqlConnection();
             connection.ConnectionString = connenctonString;
-            connection.Open();
+            try
+            {
+                connection.Open();
+            }
+            catch (SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
+            }
         }
 
         public void CloseConnection()
         {
-            connection.Close();
+            try
+            {
+                connection.Close();
+            }
+            catch (SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
         public void InsertInfo(BookedInfo info)
         {
@@ -47,11 +73,11 @@ namespace FinalProject
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine("Sql related exception occurred. Exception details: {0}", e.Message);
+                    LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("A generic exception occurred. Exception details: {0}", e.Message);
+                    LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
                 }
             }
         }
@@ -66,11 +92,11 @@ namespace FinalProject
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine("Sql related exception occurred. Exception details: {0}", e.Message);
+                    LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("A generic exception occurred. Exception details: {0}", e.Message);
+                    LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
                 }
             }
 

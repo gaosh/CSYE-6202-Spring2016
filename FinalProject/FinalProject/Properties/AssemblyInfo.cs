@@ -1,36 +1,37 @@
-ï»¿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// æœ‰å…³ç¨‹åºé›†çš„ä¸€èˆ¬ä¿¡æ¯ç”±ä»¥ä¸‹
-// æ§åˆ¶ã€‚æ›´æ”¹è¿™äº›ç‰¹æ€§å€¼å¯ä¿®æ”¹
-// ä¸ç¨‹åºé›†å…³è”çš„ä¿¡æ¯ã€‚
+// ÓĞ¹Ø³ÌĞò¼¯µÄÒ»°ãĞÅÏ¢ÓÉÒÔÏÂ
+// ¿ØÖÆ¡£¸ü¸ÄÕâĞ©ÌØĞÔÖµ¿ÉĞŞ¸Ä
+// Óë³ÌĞò¼¯¹ØÁªµÄĞÅÏ¢¡£
 [assembly: AssemblyTitle("FinalProject")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("FinalProject")]
-[assembly: AssemblyCopyright("Copyright Â©  2016")]
+[assembly: AssemblyCopyright("Copyright ?  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4netConfig.xml", Watch = true)]
 
-//å°† ComVisible è®¾ç½®ä¸º false å°†ä½¿æ­¤ç¨‹åºé›†ä¸­çš„ç±»å‹
-//å¯¹ COM ç»„ä»¶ä¸å¯è§ã€‚  å¦‚æœéœ€è¦ä» COM è®¿é—®æ­¤ç¨‹åºé›†ä¸­çš„ç±»å‹ï¼Œ
-//è¯·å°†æ­¤ç±»å‹çš„ ComVisible ç‰¹æ€§è®¾ç½®ä¸º trueã€‚
+//½« ComVisible ÉèÖÃÎª false ½«Ê¹´Ë³ÌĞò¼¯ÖĞµÄÀàĞÍ
+//¶Ô COM ×é¼ş²»¿É¼û¡£  Èç¹ûĞèÒª´Ó COM ·ÃÎÊ´Ë³ÌĞò¼¯ÖĞµÄÀàĞÍ£¬
+//Çë½«´ËÀàĞÍµÄ ComVisible ÌØĞÔÉèÖÃÎª true¡£
 [assembly: ComVisible(false)]
 
-// å¦‚æœæ­¤é¡¹ç›®å‘ COM å…¬å¼€ï¼Œåˆ™ä¸‹åˆ— GUID ç”¨äºç±»å‹åº“çš„ ID
+// Èç¹û´ËÏîÄ¿Ïò COM ¹«¿ª£¬ÔòÏÂÁĞ GUID ÓÃÓÚÀàĞÍ¿âµÄ ID
 [assembly: Guid("a741290a-c29b-4502-9d09-bf5607c5d9aa")]
 
-// ç¨‹åºé›†çš„ç‰ˆæœ¬ä¿¡æ¯ç”±ä¸‹åˆ—å››ä¸ªå€¼ç»„æˆ: 
+// ³ÌĞò¼¯µÄ°æ±¾ĞÅÏ¢ÓÉÏÂÁĞËÄ¸öÖµ×é³É: 
 //
-//      ä¸»ç‰ˆæœ¬
-//      æ¬¡ç‰ˆæœ¬
-//      ç”Ÿæˆå·
-//      ä¿®è®¢å·
+//      Ö÷°æ±¾
+//      ´Î°æ±¾
+//      Éú³ÉºÅ
+//      ĞŞ¶©ºÅ
 //
-//å¯ä»¥æŒ‡å®šæ‰€æœ‰è¿™äº›å€¼ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨â€œç”Ÿæˆå·â€å’Œâ€œä¿®è®¢å·â€çš„é»˜è®¤å€¼ï¼Œ
-// æ–¹æ³•æ˜¯æŒ‰å¦‚ä¸‹æ‰€ç¤ºä½¿ç”¨â€œ*â€: :
+//¿ÉÒÔÖ¸¶¨ËùÓĞÕâĞ©Öµ£¬Ò²¿ÉÒÔÊ¹ÓÃ¡°Éú³ÉºÅ¡±ºÍ¡°ĞŞ¶©ºÅ¡±µÄÄ¬ÈÏÖµ£¬
+// ·½·¨ÊÇ°´ÈçÏÂËùÊ¾Ê¹ÓÃ¡°*¡±: :
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
