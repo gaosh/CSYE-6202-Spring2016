@@ -91,6 +91,28 @@ namespace FinalProject
                 command.ExecuteNonQuery();
             }
         }
+        public Flight getFlight(string flightnumber)
+        {
+            Flight flight;
+            string sql = string.Format("Select Top(1) * From Flights Where Flight_number = '{0}'", flightnumber);
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                SqlDataReader dr = command.ExecuteReader();
+                dr.Read();
+                flight = new Flight
+                {
+                    Flight_number = (string)dr["Flight_number"],
+                    carrier = (string)dr["carrier"],
+                    date = (string)dr["date"],
+                    arrival = (string)dr["arrival"],
+                    E_pirce = (string)dr["E_price"],
+                    Eplus_pirce = (string)dr["Eplus_price"],
+                    B_pirce = (string)dr["B_price"]
+
+                };
+            }
+                return flight;
+        }
         public List<Flight> GetAllFlights()
         {
             var Flightlist = new List<Flight>();
