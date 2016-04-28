@@ -9,25 +9,7 @@ namespace FinalProject
 {
     public class BookedInfoDAL:InterfaceDAL
     {
-        private SqlConnection connection = null;
-        public void OpenConnection(string connenctonString)
-        {
-            connection = new SqlConnection();
-            connection.ConnectionString = connenctonString;
-            try
-            {
-                connection.Open();
-            }
-            catch (SqlException e)
-            {
-                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
-            }
-            catch (Exception e)
-            {
-                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
-            }
-        }
-
+        protected SqlConnection connection = null;
         public void CloseConnection()
         {
             try
@@ -45,6 +27,24 @@ namespace FinalProject
             finally
             {
                 connection.Close();
+            }
+        }
+
+        public void OpenConnection(string connectionString)
+        {
+            connection = new SqlConnection();
+            connection.ConnectionString = connectionString;
+            try
+            {
+                connection.Open();
+            }
+            catch (SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
             }
         }
         public void InsertInfo(BookedInfo info)

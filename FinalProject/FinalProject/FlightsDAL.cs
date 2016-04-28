@@ -9,25 +9,7 @@ namespace FinalProject
 {
     public class FlightsDAL:InterfaceDAL
     {
-
-        private SqlConnection connection = null;
-        public void OpenConnection(string connenctonString)
-        {
-           
-            connection = new SqlConnection();
-            connection.ConnectionString = connenctonString;
-            try {
-                connection.Open();
-            }
-            catch(SqlException e)
-            {
-                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
-            }catch(Exception e)
-            {
-                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
-            }
-        }
-
+        protected SqlConnection connection = null;
         public void CloseConnection()
         {
             try
@@ -45,6 +27,24 @@ namespace FinalProject
             finally
             {
                 connection.Close();
+            }
+        }
+
+        public void OpenConnection(string connectionString)
+        {
+            connection = new SqlConnection();
+            connection.ConnectionString = connectionString;
+            try
+            {
+                connection.Open();
+            }
+            catch (SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
             }
         }
         public void InsertFlight(Flight flight)
@@ -81,9 +81,9 @@ namespace FinalProject
             }
 
         }
-        public void UpdateCarPetName(string Flightnumber, Flight flight)
+        public void UpdateFlight(string Flightnumber, Flight flight)
         {
-            string sql = string.Format("Update Flights Set date = '{0}' Set arrival = '{1}' Set E_price = '{2}' Set Eplus_price= '{3}' Set B_price = '{4}' Set carrier = '{5}' Where Flight_Number = '{6}'",
+            string sql = string.Format("Update Flights Set date = '{0}', arrival = '{1}', E_price = '{2}', Eplus_price= '{3}', B_price = '{4}', carrier = '{5}' Where Flight_Number = '{6}'",
                 flight.date,flight.arrival,flight.E_pirce,flight.Eplus_pirce,flight.B_pirce,flight.carrier, Flightnumber);
 
             using (SqlCommand command = new SqlCommand(sql, connection))
@@ -137,6 +137,31 @@ namespace FinalProject
             }
                 return Flightlist;
         }
-        
+
+        public List<Flight> GetSearchedFlights(string dep_arr)
+        {
+            var Flightlist = new List<Flight>();
+            string sql = string.Format("Select * From Flights Where arrival = '{0}'",dep_arr);
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                SqlDataReader dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    Flightlist.Add(new Flight
+                    {
+                        Flight_number = (string)dr["Flight_number"],
+                        carrier = (string)dr["carrier"],
+                        date = (string)dr["date"],
+                        arrival = (string)dr["arrival"],
+                        E_pirce = (string)dr["E_price"],
+                        Eplus_pirce = (string)dr["Eplus_price"],
+                        B_pirce = (string)dr["B_price"]
+
+                    });
+                }
+            }
+            return Flightlist;
+        }
+
     }
 }

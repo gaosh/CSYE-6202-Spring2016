@@ -9,25 +9,8 @@ namespace FinalProject
 {
     public class FlightDetailDAL : InterfaceDAL
     {
-        private SqlConnection connection = null;
-        public void OpenConnection(string connenctonString)
-        {
-            connection = new SqlConnection();
-            connection.ConnectionString = connenctonString;
-            try
-            {
-                connection.Open();
-            }
-            catch (SqlException e)
-            {
-                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
-            }
-            catch (Exception e)
-            {
-                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
-            }
-        }
 
+        protected SqlConnection connection = null;
         public void CloseConnection()
         {
             try
@@ -45,6 +28,24 @@ namespace FinalProject
             finally
             {
                 connection.Close();
+            }
+        }
+
+        public void OpenConnection(string connectionString)
+        {
+            connection = new SqlConnection();
+            connection.ConnectionString = connectionString;
+            try
+            {
+                connection.Open();
+            }
+            catch (SqlException e)
+            {
+                LogHelper.WriteLog(string.Format("Sql related exception occurred. Exception details: {0}", e.Message));
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLog(string.Format("A generic exception occurred. Exception details: {0}", e.Message));
             }
         }
         public void InsertFlightDetail(FlightDetail FD)
@@ -91,6 +92,16 @@ namespace FinalProject
                 
             }
                 return fd;
+        }
+        public void UpdateFlightDetail(string Flightnumber, FlightDetail flightdetail)
+        {
+            string sql = string.Format("Update FlightDetails Set Crew_Info = '{0}', Carrier_Info = '{1}' Where Flight_Number = '{2}'",
+                flightdetail.Crew_Info,flightdetail.Carrier_Info, Flightnumber);
+
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.ExecuteNonQuery();
+            }
         }
     }
 }
