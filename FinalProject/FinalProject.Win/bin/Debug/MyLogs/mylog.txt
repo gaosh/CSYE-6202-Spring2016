@@ -1,0 +1,92 @@
+
+[Log Starts]
+2016-04-26 21:06:48,050 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-26 21:06:48,068 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:29:19,052 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 12:29:19,067 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:29:31,959 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:35:09,219 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 12:35:09,235 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:35:23,565 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:37:35,576 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 12:37:35,600 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:42:32,879 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:43:13,370 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:48:02,037 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:50:43,500 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:53:43,259 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 12:55:49,465 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 13:04:05,516 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 15:41:18,385 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 15:42:03,585 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 15:43:58,150 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 15:46:13,566 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 16:34:33,596 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 16:39:54,147 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 16:44:48,633 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 16:53:18,742 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 17:08:49,032 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 17:08:49,071 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 17:20:26,530 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 17:20:26,564 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 17:20:48,298 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 20:50:06,469 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 20:50:06,487 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 21:19:46,096 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 21:22:15,480 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Starts]
+2016-04-27 21:39:06,089 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]
+[Log Starts]
+2016-04-27 21:39:30,950 [SEANGAO\gaosh_000] - Porgram Started!
+2016-04-27 21:39:30,969 [SEANGAO\gaosh_000] - Login Success!
+[Log Ends]
+[Log Starts]
+2016-04-27 21:39:48,553 [SEANGAO\gaosh_000] - Porgram Started!
+[Log Ends]

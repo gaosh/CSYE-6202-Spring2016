@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD5CE6A8-C6AD-42C8-814E-92F3596F7407}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FinalProject.Win</RootNamespace>
+    <AssemblyName>FinalProject.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FinalProject.Win.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddFlightView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFlightView.Designer.cs">
+      <DependentUpon>AddFlightView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorView.Designer.cs">
+      <DependentUpon>AdministratorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookedHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookedHistory.Designer.cs">
+      <DependentUpon>BookedHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookedInfoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookedInfoView.Designer.cs">
+      <DependentUpon>BookedInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookFlight.Designer.cs">
+      <DependentUpon>BookFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightDetailView.Designer.cs">
+      <DependentUpon>FlightDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightView.Designer.cs">
+      <DependentUpon>FlightView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateFlightView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFlightView.Designer.cs">
+      <DependentUpon>UpdateFlightView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddFlightView.resx">
+      <DependentUpon>AddFlightView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorView.resx">
+      <DependentUpon>AdministratorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookedHistory.resx">
+      <DependentUpon>BookedHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookedInfoView.resx">
+      <DependentUpon>BookedInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookFlight.resx">
+      <DependentUpon>BookFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightDetailView.resx">
+      <DependentUpon>FlightDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightView.resx">
+      <DependentUpon>FlightView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UpdateFlightView.resx">
+      <DependentUpon>UpdateFlightView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinalProject\FinalProject.DAL.csproj">
+      <Project>{a741290a-c29b-4502-9d09-bf5607c5d9aa}</Project>
+      <Name>FinalProject.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
